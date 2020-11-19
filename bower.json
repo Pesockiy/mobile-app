@@ -1,0 +1,22 @@
+{
+  "directory": "src/assets/vendors",
+  "name": "Boilerplate",
+  "description": "Boilerplate PT",
+  "main": "index.js",
+  "authors": [
+    "PT"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
+  }
+}
