@@ -13,12 +13,21 @@
 
 // @import "base/normalize";
 
-// @import "helpers/helpers";
+@import "helpers/variables.scss";
+
+@import "helpers/colors.scss";
 
 // @import "base/_base";
 
-// @import "base/_content.scss";
+@import "base/_content.scss";
+
+@import "pages/_index.sass";
 
 @import "components/_cards.sass";
+
+@import "components/_header.sass";
+
+@import "components/_sections.sass";
+
 
 

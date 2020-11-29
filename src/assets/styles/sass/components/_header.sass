@@ -1,0 +1,90 @@
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+
+.header--fixed
+    position: fixed
+    left: 0
+    right: 0
+    z-index: 9999
+
+.app-logo
+    font-size: 24px
+    text-decoration: none
+    color: #fff
+    span
+        font-weight: 700
+    
+.top-block-wrap
+    padding: 9px 0
+    visibility: visible
+    opacity: 1
+    background-color: #fff
+    transition: visibility .3s, padding .3s
+    &--hidden
+        padding: 0
+        height: 0
+        opacity: 0
+        visibility: hidden
+
+
+.top-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__address
+        margin-right: 15px
+        
+.b-links
+    &__link
+        display: inline-block
+        position: relative
+        height: 26px
+        width: 26px
+        border-radius: 50%
+        border: 1px solid #c5c7c9
+    &__link + &__link
+        margin-left: 6px
+    &::after
+        content: 'f39e'
+        
+
+.header-inner
+    background-color: rgba($blueColor,.4)
+    box-shadow: 0 0 8px rgba(0,0,0,.5)
+    transition: all .3s
+    &--notrans
+        background-color: rgba($blueColor,1)
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 68px
+        align-items: center
+
+.nav
+    display: flex
+    justify-content: flex-end
+    &__list
+        display: flex
+        justify-content: space-between
+    &__list-item + &__list-item
+        margin-left: 25px
+
+    &__link
+        position: relative
+        text-decoration: none
+        font: 14px/1.2 'Open Sans', sans-serif
+        color: #fff
+        transition: color .3s ease-in-out
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            height: 1px
+            bottom: -5px
+            opacity: 0
+            transition: opacity .3s
+            background-color: #fff
+        &:hover::after
+            opacity: 1
+            
