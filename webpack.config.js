@@ -35,8 +35,9 @@ module.exports = {
           {loader: 'style-loader'},
           // {loader: 'url-loader'},
           {loader: MiniCssExtractPlugin.loader},
-          {loader: 'css-loader', options: {sourceMap: true}},
-          {loader: 'postcss-loader'},
+          {loader: 'css-loader', options: {
+            sourceMap: true}},
+          // {loader: 'postcss-loader'},
         ]
         /* use: ExtractTextPlugin.extract(
             {
@@ -53,7 +54,7 @@ module.exports = {
           {loader: 'style-loader'},
           {loader: MiniCssExtractPlugin.loader},
           {loader: "css-loader", options: {sourceMap: true}},
-          {loader: 'postcss-loader'},
+          // {loader: 'postcss-loader'},
           //{loader: "autoprefixer-loader?browsers=last 10 version", options: {context: process.cwd()}},
           // {loader: 'resolve-url-loader'},
           {

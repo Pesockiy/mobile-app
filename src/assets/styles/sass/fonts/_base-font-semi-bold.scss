@@ -1,0 +1,7 @@
+@font-face {
+  font-family: $base-font-semi-bold;
+  src: url($font-src + 'OpenSansSemiBold/OpenSans-SemiBold.woff2') format('woff2'),
+  url($font-src + 'OpenSansSemiBold/OpenSans-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

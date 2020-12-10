@@ -67,7 +67,7 @@ body
         width: 100%
         right: -2000px
         max-width: 580px
-        min-width: 400px
+        min-width: 500px
         transform: rotate(-90deg) scaleX(2)
         animation: transition 1s both ease-out
         @keyframes transition
@@ -77,7 +77,11 @@ body
 
     &__ttl
         color: #fff
-        font: 900 60px/1.2 'Poppins',sans-serif
+        font: 900 60px/1.2 $second-font
+        &::after
+            display: block
+            content: '\f17b'
+            font-family: $font-awesome
 
 .buttons
     .button
@@ -114,7 +118,7 @@ body
     margin: 0 auto
     &__img
         max-width: 100%
-        margin: 0 20px
+        margin: 0 40px
     &__left,
     &__right
         max-width: 340px
@@ -166,6 +170,7 @@ body
     &__right
         max-width: 700px
         margin: 0 auto
+        padding-right: 20px
     &__left
         margin: 0 50px
     .section__sub-ttl,
@@ -195,6 +200,10 @@ body
 
 .screenshot
     margin: 3px
+    opacity: 0.5
+    transition: opacity .3s
+    &:hover
+        opacity: 1
     img
         display: block
         width: 100%
@@ -262,7 +271,7 @@ body
         justify-content: space-between
     &__item
         position: relative
-        padding: 12px 60px
+        padding: 12px 38px 12px 60px
         color: #fff
         & + &::after
             content: ''
@@ -435,17 +444,20 @@ body
             width: 30px
             background-color: #fff
 
-.active
-    background-color: #506070!important
+    .active
+        background-color: #506070!important
 
 .tariffs
     display: flex
     justify-content: space-between
     align-content: flex-end
+    max-width: 1260px
+    margin: auto
     .tariff
-        flex: 0  0 400px
+        flex: 0  0.75 400px
         align-self: flex-end
         padding-bottom: 20px
+        margin-bottom: 30px
         text-align: center
         border: 1px solid $darkBlueColor
         &--active
@@ -507,3 +519,34 @@ body
             text-decoration: none
             border-radius: 10px
             background-color: #26679e
+
+
+@media screen and ( max-width: $screen-md)
+
+    .player-wrap
+        flex-direction: column
+    .slider-player
+        margin-right: 0
+    .slider-playlist
+        padding: 10px
+    .swiper-slide
+        width: calc(100vw - 30px)!important
+        height: 56.25vw!important
+    .playlist
+        margin-top: 10px
+        flex-direction: row
+        max-width: none
+        height: auto
+        &__item + &__item
+            margin-left: 10px
+        &__item
+            border: 1px solid rgba(0,0,0,3.5)
+        &__item-left
+            margin-right: 20px
+        &__item-right
+            width: 230px
+
+    
+
+    .statistic__counter 
+        font-size: 40px

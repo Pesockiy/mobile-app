@@ -1,23 +1,7 @@
-/**------------------------------------------------------------------
- * [Table of contents | Critical]
- *
- * 1. Typography #typography
- * 2. Variables #variables
- * 3. Colors #colors
- * 4. Mixins #mixins
- * 5. Normalize #normalize
- * 6. Grid-mixins #grid-mixins
- * 7. Responsive-utilites #responsive-utilites
- * 8. Grid #grid
- */
-
-// @import "base/normalize";
 
 @import "helpers/variables.scss";
 
-@import "helpers/colors.scss";
-
-// @import "base/_base";
+@import "helpers/helpers.scss";
 
 @import "base/_content.scss";
 
@@ -28,6 +12,8 @@
 @import "components/_header.sass";
 
 @import "components/_sections.sass";
+
+@import "components/_footer.sass";
 
 
 

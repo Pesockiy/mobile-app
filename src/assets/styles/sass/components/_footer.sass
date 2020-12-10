@@ -1,0 +1,68 @@
+.footer
+    color: #fff
+    &-top
+        padding: 50px 0 55px
+        background-color: $lightBlueColor
+        &__inner
+            display: flex
+            justify-content: space-between
+    &-bottom
+        padding: 18px 0
+        background-color: $darkBlueColor
+    &__col
+        + &__col
+            margin-left: 20px
+        &:nth-of-type(1)
+            max-width: 300px
+        &:nth-of-type(2)
+            max-width: 200px
+        &:nth-of-type(3)
+            max-width: 205px
+        &:nth-of-type(4)
+            max-width: 250px
+    &__ttl
+        padding-bottom: 0
+        margin-bottom: 25px
+        &::after
+            width: 25px
+            background-color: #fff
+    &__about
+        margin-bottom: 20px
+        line-height: 1.8
+    &__link
+        display: inline-block
+        margin-bottom: 12px
+        text-decoration: none
+
+.subscribe-form
+    display: flex
+    flex-direction: column
+    &__input
+        padding: 5px
+        border: none
+        border-bottom: 1px solid #fff
+        background-color: transparent
+        color: #fff
+        outline: none
+        &::placeholder
+            color: #fff
+    &__button
+        margin-top: 22px
+        align-self: flex-end
+        color: #fff
+
+.address
+    font-style: normal
+    &__link
+        display: inline-block
+        position: relative
+        margin-bottom: 13px
+        text-decoration: none
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 37px
+            width: 20px
+            height: 20px
+            background-color: #fff
+            vertical-align: middle
