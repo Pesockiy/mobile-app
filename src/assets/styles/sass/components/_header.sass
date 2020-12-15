@@ -10,6 +10,7 @@
     text-transform: none
     border: 0
     z-index: 999
+    visibility: hidden
     &.active
         .hamburger-inner
             transition: 0s ease-out
@@ -65,20 +66,12 @@
     right: 0
     z-index: 9999
 
-.header-mobile-wrap
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    z-index: 99
+.header-mobile-wrap.active
     visibility: hidden
-    bottom: 0
     display: flex
     justify-content: space-between
     flex-direction: column-reverse
     background: $darkColor
-    &.active
-        visibility: visible
     .header-inner__wrap
         height: auto
         padding: 30px
@@ -174,16 +167,28 @@
         &:hover::after
             opacity: 1
 
-@media screen and ( max-width: $screen-sm)
+@media screen and ( max-width: $screen-md)
 
     .app-logo
         display: none
 
+    .hamburger
+        visibility: visible
+
     .top-block-wrap
         visibility: hidden
 
-    .header-mobile-wrap .nav__link
-        text-shadow: 0 1px 2px
+    .header-mobile-wrap.active 
+        .header-inner__wrap
+            overflow-y: scroll
+            height: 100vh
+
+    .header-mobile-wrap
+        visibility: hidden
+        &.active
+            visibility: visible
+        .nav__link
+            text-shadow: 0 1px 2px
 
     .header-inner
         box-shadow: none
@@ -196,7 +201,7 @@
     @for $i from 0 through 10
         .header-mobile-wrap.active .nav__list-item:nth-of-type(#{$i}) .nav__link
             $length: .2s*$i
-            animation: shadoww $length 9s infinite
+            animation: shadoww $length .2s*$i
             @keyframes shadoww
                 50%
                     text-shadow: 0 4px 5px
